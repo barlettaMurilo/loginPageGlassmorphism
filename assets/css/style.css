@@ -1,0 +1,235 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image:url('https://static.vecteezy.com/ti/vetor-gratis/p3/12483071-fundo-decorativo-de-onda-gradiente-liquido-violeta-e-roxo-abstrato-papel-de-parede-de-ondas-curvas-em-camadas-de-fluxo-suave-vetor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color:White;
+}
+
+.boxLogin {
+    width:22rem;
+    height:24rem;
+    backdrop-filter: blur(10px);
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    border:1px solid rgba(255,255,255,0.2);
+    background-color:rgba(255,255,255,0.08);
+}
+
+.logo {
+    width:50px;
+    position:absolute;
+    margin:15px;
+    filter: invert();
+}
+
+.boxLogin .loginContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxLogin .loginContent h1 {
+    color:white;
+    width:100%;
+    text-align:center;
+    margin-top:2rem;
+    /*background-color:red;*/
+}
+
+.boxLogin .loginContent p {
+    font-size:0.8rem;
+}
+
+.boxLogin .loginContent input {
+    border:none;
+    width:14rem;
+    height:2rem;
+    padding:0 1rem;
+    font-size:11px;
+    background-color:transparent;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.05);
+    border-radius:5rem;
+    background-color:rgba(0,0,0,0.1);
+    color:white;
+}
+
+
+.boxLogin .loginContent input:focus {
+    outline:none;
+}
+
+.boxLogin .loginContent input::placeholder {
+    opacity:1;
+    transition: all 0.3s;
+    color:white;
+}
+
+.boxLogin .loginContent input:focus::placeholder {
+    opacity: 0;
+    transform: translateY(-5rem);
+}
+
+.inputContent {
+    /*background-color:red;*/
+    margin-top:2rem;
+}
+
+.titleInput {
+    position:absolute;
+    z-index:-20;
+    transition: all 0.2s;
+    opacity:0;
+    text-shadow:0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.titleInput.focused {
+    font-weight: bold;
+    font-size:13px;
+    transform: translateY(-0.7rem);
+    z-index:9999;
+    padding:0px 1.1rem;
+    opacity:100%;
+}
+
+.buttonsContent {
+    margin-top:2rem;
+    height:2rem;
+    width:16rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonsContent .buttonTheme {
+    background-color:white;
+    width:7.6rem;
+    height:100%;
+    border-radius:1rem;
+    border:2px solid white;
+    color:#333;
+    font-weight:bold;
+    font-size:0.8rem;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.05);
+    transform: translateY(0);
+    cursor:pointer;
+    transition:transform 0.5s;
+}
+
+.buttonsContent .buttonTheme:hover {
+    transform: translateY(-0.1rem);
+    transition:all 0.5s;
+    border:2px solid white;
+    background-color:transparent;
+    color:white;
+    text-shadow:0px 2px 5px rgba(0,0,0,0.3);
+}
+
+.socialContent {
+    width:16rem;
+    height:2.5rem;
+    margin-top:1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.socialContent button {
+    height:100%;
+    width:2.5rem;
+    border-radius:50%;
+    border:none;
+    text-align:center;
+    color:white;
+    cursor:pointer;
+    transition:transform 0.5s;
+    transform:rotate(0);
+}
+
+.socialContent button:hover {
+    transform:rotate(360deg);
+    transition:all 0.5s;
+    margin-top:-3px;
+}
+
+.socialContent .google {
+    background-color:#e84118;
+}
+
+.socialContent .github {
+    background-color:#353b48;
+}
+
+.socialContent .facebook {
+    background-color:#273c75;
+}
+
+@media (max-width: 450px) {
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image:url('https://static.vecteezy.com/ti/vetor-gratis/p3/12483071-fundo-decorativo-de-onda-gradiente-liquido-violeta-e-roxo-abstrato-papel-de-parede-de-ondas-curvas-em-camadas-de-fluxo-suave-vetor.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color:White;
+        backdrop-filter: blur(10px);
+        animation:none;
+    }
+    .boxLogin {
+        background:transparent;
+        border:none;
+        box-shadow:none;
+        transform: translateY(-20%);
+    }
+    .boxLogin .logo {
+        display:none;
+    }
+    .boxLogin .loginContent input {
+        border:none;
+        width:18rem;
+        height:3rem;
+        padding:0 1rem;
+        font-size:13px;
+        background-color:transparent;
+        box-shadow:0px 5px 10px rgba(0,0,0,0.05);
+        border-radius:5rem;
+        background-color:rgba(0,0,0,0.1);
+        color:white;
+    }
+    .boxLogin .loginContent h1 {
+        font-size:3rem;
+    }
+    .buttonsContent {
+        margin-top:2rem;
+        height:2rem;
+        width:20rem;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .buttonsContent .buttonTheme {
+        width:9.5rem;
+        height:3rem;
+    }
+    .socialContent {
+        height:3rem;
+        margin-top:2rem;
+    }
+    .socialContent button {
+        height:3rem;
+        width:3rem;
+    }
+}
